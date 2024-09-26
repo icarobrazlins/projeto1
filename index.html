@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessar Pastas Específicas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Acessar Pastas</h1>
+        <button onclick="openFolder('C:\\Caminho\\Para\\Pasta1')">Acessar Pasta 1</button>
+        <button onclick="openFolder('C:\\Caminho\\Para\\Pasta2')">Acessar Pasta 2</button>
+        <button onclick="openFolder('C:\\Caminho\\Para\\Pasta3')">Acessar Pasta 3</button>
+    </div>
+
+    <script>
+        function openFolder(path) {
+            // Usando um link para abrir a pasta
+            window.location.href = 'file:///' + path.replace(/\\/g, '/');
+        }
+    </script>
+</body>
+</html>
